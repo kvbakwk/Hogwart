@@ -1,0 +1,92 @@
+* {
+  font-family: sans-serif;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+
+  background-color: #303030;
+
+  overflow-x: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  font-size: 2rem;
+
+  width: 100vw;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+main section input[type="text"] {
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+
+  width: 100px;
+  height: 40px;
+
+  background-color: #303030;
+  border: none;
+  border-bottom: 3px solid #606060;
+  border-radius: 999999px;
+  outline: none;
+}
+
+main section select {
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+
+  background-color: #303030;
+  border: none;
+}
+
+main section input[type="button"] {
+  color: #a0a0a0;
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: underline;
+
+  width: auto;
+  height: 40px;
+
+  background-color: #303030;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.list,
+.list > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.list > div > div {
+  display: flex;
+  gap: 10px;
+}

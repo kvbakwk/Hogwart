@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 3</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section>
+            <input type="text" class="calc1">
+            <select class="calc3">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <input type="text" class="calc2">
+            =
+            <span class="calc"></span>
+            <input type="button" value="wynik" onclick="handleCalcClick()">
+        </section>
+        <section>
+            <div class="">
+                <select class="block1">
+                    <option value="blue">niebieski</option>
+                    <option value="green">zielony</option>
+                    <option value="red">czerwony</option>
+                </select>
+                <select class="block2">
+                    <option value="100">100</option>
+                    <option value="200">200</option>
+                    <option value="300">300</option>
+                </select>
+                <select class="block3">
+                    <option value="100">100</option>
+                    <option value="200">200</option>
+                    <option value="300">300</option>
+                </select>
+            </div>
+            <input type="button" value="pokaż się" onclick="handleBlockClick()">
+            <div class="block"></div>
+        </section>
+        <section>
+            <input type="text" class="list1" style="width: 300px;">
+            <input type="button" value="wstaw" onclick="handleListClick()">
+            <div class="list"></div>
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
