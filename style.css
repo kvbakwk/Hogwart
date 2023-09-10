@@ -8,11 +8,59 @@
 }
 
 body {
-  color: #fff;
+  color: #000;
 
-  background-color: #303030;
+  background-color: #fff;
 
   overflow-x: hidden;
+}
+
+input[type="text"] {
+  color: #000;
+  font-size: 1.5rem;
+  text-align: center;
+
+  width: 150px;
+  height: 40px;
+
+  background-color: #fff;
+  border: none;
+  border-bottom: 2px solid #606060;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  outline: none;
+}
+
+select {
+  color: #000;
+  font-size: 2rem;
+  text-align: center;
+
+  background-color: #fff;
+  border: none;
+  outline: none;
+}
+
+input[type="button"] {
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+
+  width: auto;
+  height: 40px;
+  padding: 0 20px;
+
+  background-color: #606060;
+  border-radius: 10px;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="button"]:active {
+  box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
 }
 
 main {
@@ -32,61 +80,38 @@ main section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 
   width: 100vw;
   height: 100vh;
 }
 
-main section input[type="text"] {
-  color: #fff;
-  font-size: 1.5rem;
-  text-align: center;
-
-  width: 100px;
-  height: 40px;
-
-  background-color: #303030;
-  border: none;
-  border-bottom: 3px solid #606060;
-  border-radius: 999999px;
-  outline: none;
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
 
-main section select {
-  color: #fff;
-  font-size: 2rem;
-  text-align: center;
-
-  background-color: #303030;
-  border: none;
-}
-
-main section input[type="button"] {
-  color: #a0a0a0;
-  font-size: 1.5rem;
-  text-align: center;
-  text-decoration: underline;
-
-  width: auto;
-  height: 40px;
-
-  background-color: #303030;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-
-.list,
 .list > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
+
+  padding: 10px 20px;
+
+  border-radius: 20px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
 .list > div > div {
   display: flex;
-  gap: 10px;
+  gap: 20px;
+}
+
+.block {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }

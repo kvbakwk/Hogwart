@@ -30,7 +30,21 @@ const handleBlockClick = () => {
 const handleListClick = () => {
   if (listInput1El.value.length > 0) {
     const el = document.createElement("div");
-    el.innerHTML = `${listInput1El.value} <div><input type="button" value="usuń" onclick="listDelete()"><input type="text"></div>`;
+    el.innerHTML = `<span>${listInput1El.value}</span> <div><input class="list2" type="text"><input class="list3" type="button" value="zmień"></div> <input class="list4" type="button" value="usuń">`;
     listOutputEl.appendChild(el);
+
+    for (let i = 0; i < listOutputEl.children.length; i++) {
+      const element = listOutputEl.children[i];
+
+      console.log(element.children[0]);
+      element.children[1].children[1].addEventListener("click", (e) => {
+        if (element.children[1].children[0].value.length > 0)
+          element.children[0].textContent =
+            element.children[1].children[0].value;
+      });
+      element.children[2].addEventListener("click", (e) => {
+        element.remove();
+      });
+    }
   }
 };
