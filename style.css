@@ -8,27 +8,35 @@
 }
 
 body {
-  color: #000;
+  color: #fff;
 
-  background-color: #fff;
+  background-color: #000;
 
   overflow-x: hidden;
 }
 
-input[type="text"] {
-  color: #000;
-  font-size: 1.5rem;
-  text-align: center;
+main {
+  z-index: 1;
+  position: relative;
+}
 
-  width: 150px;
+input[type="text"],
+textarea {
+  color: #000;
+  font-size: 1.2rem;
+
+  width: 100%;
   height: 40px;
+  padding: 0 10px;
 
   background-color: #fff;
   border: none;
-  border-bottom: 2px solid #606060;
-  border-radius: 10px;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   outline: none;
+}
+textarea {
+  height: auto;
+  padding: 10px 10px;
 }
 
 select {
@@ -41,24 +49,112 @@ select {
   outline: none;
 }
 
-input[type="button"] {
+input[type="button"],
+input[type="submit"] {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-align: center;
+  letter-spacing: 2px;
 
-  width: auto;
-  height: 40px;
+  width: 190px;
+  height: 50px;
   padding: 0 20px;
 
-  background-color: #606060;
-  border-radius: 10px;
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
-    0 8px 10px -6px rgb(0 0 0 / 0.1);
-  border: none;
+  background-color: transparent;
+
+  border: 2px solid #fff;
   outline: none;
   cursor: pointer;
 }
 
 input[type="button"]:active {
   box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+}
+
+h1,
+h2 {
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+main section.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  width: 400px;
+  height: 30vh;
+}
+
+main section.left header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  height: 30%;
+}
+
+main section.left header span {
+  line-height: 1.5rem;
+}
+main section.left footer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.circles {
+  display: flex;
+  gap: 15px;
+
+  height: 50px;
+}
+
+.circles .circle {
+  width: 30px;
+  height: 30px;
+
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+form {
+  display: contents;
+}
+
+section.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  width: 400px;
+  height: 38vh;
+}
+
+.yellow {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 47vw;
+
+  width: 300px;
+  height: 100vh;
+
+  background-color: rgb(207, 207, 25);
+}
+
+h1 {
+  font-size: 1.6rem;
 }
