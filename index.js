@@ -1,60 +1,33 @@
-const h1 = document.querySelectorAll("div");
+const div = document.querySelectorAll("div")[1];
+let list = document.querySelectorAll("li");
 
-h1[0].addEventListener("mousemove", (e) => {
-  e.target.textContent = `Współrzędne: X ${e.pageX} Y ${e.pageY}`;
+const increase = () => {
+  div.style.fontSize =
+    parseFloat(parseFloat(div.style.fontSize.replace("rem", "")) + 0.5) + "rem";
+};
+const decrease = () => {
+  div.style.fontSize =
+    parseFloat(parseFloat(div.style.fontSize.replace("rem", "")) - 0.5) + "rem";
+};
 
-  if (e.pageX == 800 && e.pageY == 40) e.target.style.display = "none";
-  if (e.pageX > 1000) e.target.style.backgroundColor = "purple";
-  if (e.pageX < 1001) e.target.style.backgroundColor = "blue";
-});
-h1[0].addEventListener("mouseover", (e) => {
-  e.target.style.backgroundColor = "blue";
-});
-h1[0].addEventListener("mouseout", (e) => {
-  e.target.style.backgroundColor = "yellow";
-});
-h1[0].addEventListener("click", (e) => {
-  alert("kliknąłeś w pasek");
-});
+const changecolor = () => {
+  let num = prompt("Wybierz linijkę");
+  let color = prompt("Na jaki kolor?");
 
-h1[1].addEventListener("click", (e) => {
-  switch (
-    prompt("Wybierz 1-jeśli chcesz usunąć, 2-jeśli chcesz zmienić kolor")
-  ) {
-    case "1":
-      e.target.style.display = "none";
-      break;
-    case "2":
-      e.target.style.backgroundColor = prompt("Jaki kolor chcesz?");
-      break;
-    default:
-      break;
-  }
-});
-h1[2].addEventListener("click", (e) => {
-  switch (
-    prompt("Wybierz 1-jeśli chcesz usunąć, 2-jeśli chcesz zmienić kolor")
-  ) {
-    case "1":
-      e.target.style.display = "none";
-      break;
-    case "2":
-      e.target.style.backgroundColor = prompt("Jaki kolor chcesz?");
-      break;
-    default:
-      break;
-  }
-});
+  list[num - 1].style.color = color;
+  list = document.querySelectorAll("li");
+};
+const changecontent = () => {
+  let num = prompt("Wybierz linijkę");
+  let content = prompt("Co ma być napisane?");
 
-h1[3].addEventListener("mouseover", (e) => {
-  e.target.style.float = "left";
-  e.target.style.backgroundColor = "green";
-});
-h1[4].addEventListener("mouseover", (e) => {
-  e.target.style.float = "right";
-  e.target.style.backgroundColor = "green";
-});
-h1[5].addEventListener("mouseover", (e) => {
-  e.target.style.clear = "both";
-  e.target.style.backgroundColor = "green";
-});
+  list[num - 1].textContent = content;
+  list = document.querySelectorAll("li");
+};
+const remove = () => {
+  let num = prompt("Którą linijkę chcesz usunąć?");
+  let valid = confirm("Czy na pewno chcesz usunąć?");
+
+  if (valid) list[num - 1].remove();
+  list = document.querySelectorAll("li");
+};
