@@ -15,50 +15,73 @@ body {
   overflow-x: hidden;
 }
 
-input[type="text"] {
-  color: #000;
-  font-size: 1.5rem;
-  text-align: center;
+header {
+  width: 100vw;
+  height: 120px;
 
-  width: 150px;
-  height: 40px;
-
-  background-color: #fff;
-  border: none;
-  border-bottom: 2px solid #606060;
-  border-radius: 10px;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  outline: none;
+  background-color: grey;
 }
+nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 
-select {
-  color: #000;
-  font-size: 2rem;
-  text-align: center;
-
-  background-color: #fff;
-  border: none;
-  outline: none;
+  width: 100vw;
+  height: 60px;
 }
+nav .el {
+  display: flex;
+  justify-content: center;
 
-input[type="button"] {
   color: #fff;
-  font-size: 1.5rem;
-  text-align: center;
 
-  width: auto;
-  height: 40px;
-  padding: 0 20px;
+  padding-top: 5px;
 
-  background-color: #606060;
-  border-radius: 10px;
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
-    0 8px 10px -6px rgb(0 0 0 / 0.1);
-  border: none;
-  outline: none;
-  cursor: pointer;
+  background-color: rgb(99, 165, 0);
+  border: 2px groove gray;
 }
 
-input[type="button"]:active {
-  box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  margin: 15px;
+}
+main > section {
+  padding: 15px;
+  border: 3px groove gray;
+}
+
+main > section.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+main > section.bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+main > section.bottom > button {
+  width: 30px;
+}
+
+main > section.top > section.left {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+main > section.top > section.left > input {
+  width: 170px;
+}
+main > section.top > section.left > button {
+  width: 50px;
+}
+
+main > section.top > section.right {
+  display: flex;
+  flex-direction: column;
+
+  padding: 15px;
+  border: 3px groove gray;
 }

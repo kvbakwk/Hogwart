@@ -1,13 +1,68 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zadanie </title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadanie</title>
 
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header></header>
+    <nav>
+      <div class="el">item</div>
+      <div class="el">item</div>
+      <div class="el">item</div>
+      <div class="el">item</div>
+    </nav>
+    <main>
+      <section class="top">
+        <section class="left">
+          <h3>Formularz zgloszeniowy nr:1</h3>
+          <input type="text" placeholder="imie i nazwisko" />
+          <input type="text" placeholder="adres e-mail" />
+          <input type="text" placeholder="adres (ulica i nr domu)" />
+          <input type="text" placeholder="kod pocztowy" />
+          <input type="text" placeholder="miejscowosc" />
+          <input type="text" placeholder="miejscowosc" />
+          <input type="text" placeholder="nr telefonu" />
+          <input type="number" placeholder="wiek" />
+          <button>zglos</button>
+        </section>
+        <section class="right">
+          <form>
+            <p>Podaj imie <input type="text" placeholder="Podaj imie" /></p>
+            <p>
+              Podaj nazwisko <input type="text" placeholder="Podaj nazwisko" />
+            </p>
+            <p>Podaj ID <input type="text" placeholder="Identyfikator" /></p>
+            <p>Podaj swoj wiek <input type="number" placeholder="wiek" /></p>
+            <p>
+              Oznacz czy jestes mysliwym
+              <input type="checkbox" id="tak" /><label for="tak">Tak</label>
+              <input type="checkbox" id="nie" /><label for="nie">nie</label>
+            </p>
+            <img
+              src="data:image/jpeg;base64,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" />
+            <p><input type="date" placeholder="" /></p>
+            <p><input type="time" placeholder="" /></p>
+            <p><input type="color" placeholder="" /></p>
+            <p>Napisz skarge</p>
+            <textarea cols="30" rows="6"></textarea>
+            <p>
+              <button type="reset">Zresetuj</button>
+              <button type="submit">Wyślij</button>
+            </p>
+          </form>
+        </section>
+      </section>
+      <section class="bottom">
+        <h3>Formularz zgloszeniowy nr:2</h3>
+        <p><input type="date" placeholder="" /></p>
+        <p><input type="color" placeholder="" /></p>
+        <p><input type="url" name="" id="" placeholder="Adres url" /></p>
+        <button>OK!</button>
+      </section>
+    </main>
+  </body>
 </html>
