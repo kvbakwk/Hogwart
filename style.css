@@ -20,7 +20,7 @@ input[type="text"] {
   font-size: 1.5rem;
   text-align: center;
 
-  width: 150px;
+  width: 200px;
   height: 40px;
 
   background-color: #fff;
@@ -41,7 +41,8 @@ select {
   outline: none;
 }
 
-input[type="button"] {
+input[type="button"],
+input[type="submit"] {
   color: #fff;
   font-size: 1.5rem;
   text-align: center;
@@ -61,4 +62,28 @@ input[type="button"] {
 
 input[type="button"]:active {
   box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+
+  width: 100vw;
+  padding-top: 50px;
+}
+main section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+main section .element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 2rem;
 }
