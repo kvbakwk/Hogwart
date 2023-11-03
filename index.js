@@ -1,25 +1,56 @@
-const input = document.querySelector("#input");
-const output = document.querySelector("#output");
+const optionsElement = document.querySelector(".options");
+const timerElement = document.querySelector(".timer");
 
-const add = () => {
-  if (input.value === "") return;
-  const divE = document.createElement("div");
-  const spanE = document.createElement("span");
-  const inputE = document.createElement("input");
-  const buttonE = document.createElement("input");
+const startButton = document.createElement("input");
+startButton.type = "button";
+startButton.value = "start";
+const stopButton = document.createElement("input");
+stopButton.type = "button";
+stopButton.value = "pauza";
+const restartButton = document.createElement("input");
+restartButton.type = "button";
+restartButton.value = "reset";
 
-  divE.classList.add("element");
-  inputE.type = "text";
-  inputE.onkeyup = (e) => {
-    if (e.key == "Enter" && e.target.value !== "")
-      e.target.parentElement.children[0].textContent = e.target.value;
-  };
-  spanE.textContent = input.value;
-  buttonE.type = "submit";
-  buttonE.value = "Usuń";
-  buttonE.onclick = (e) => e.target.parentElement.remove();
-  divE.appendChild(spanE);
-  divE.appendChild(inputE);
-  divE.appendChild(buttonE);
-  output.appendChild(divE);
+let isActive = false;
+let hours = 0;
+let minutes = 0;
+let seconds = 0;
+
+startButton.onclick = () => {
+  isActive = true;
+  optionsElement.innerHTML = "";
+  optionsElement.appendChild(stopButton);
+  optionsElement.appendChild(restartButton);
 };
+stopButton.onclick = () => {
+  isActive = false;
+  optionsElement.innerHTML = "";
+  optionsElement.appendChild(startButton);
+  optionsElement.appendChild(restartButton);
+};
+restartButton.onclick = () => {
+  isActive = false;
+  timerElement.textContent = 0;
+  optionsElement.innerHTML = "";
+  optionsElement.appendChild(startButton);
+  optionsElement.appendChild(restartButton);
+};
+
+optionsElement.appendChild(startButton);
+optionsElement.appendChild(restartButton);
+
+setInterval(() => {
+  if (isActive) seconds = (seconds + 0.01).toFixed(2);
+
+  if (seconds == 60) {
+    seconds = 0;
+    minutes++;
+  }
+  if (minutes == 60) {
+    minutes = 0;
+    hours++;
+  }
+
+  console.log(seconds == 60);
+  timerElement.textContent = `${hours}:${minutes}:${seconds}`;
+}, 10);

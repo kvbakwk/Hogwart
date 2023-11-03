@@ -71,19 +71,19 @@ main {
   gap: 100px;
 
   width: 100vw;
-  padding-top: 50px;
+  height: 100vh;
+  margin-top: 200px;
 }
-main section {
+main section.options {
+  display: flex;
+  gap: 100px;
+}
+main section.output {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 50px;
 }
-main section .element {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-
-  font-size: 2rem;
+main section.output .timer {
+  font-size: 5rem;
 }
