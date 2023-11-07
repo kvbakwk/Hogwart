@@ -1,46 +1,48 @@
 const optionsElement = document.querySelector(".options");
 const timerElement = document.querySelector(".timer");
 
-const startButton = document.createElement("input");
-startButton.type = "button";
-startButton.value = "start";
-const stopButton = document.createElement("input");
-stopButton.type = "button";
-stopButton.value = "pauza";
-const restartButton = document.createElement("input");
-restartButton.type = "button";
-restartButton.value = "reset";
+const buttons = [
+  document.createElement("input"),
+  document.createElement("input"),
+  document.createElement("input"),
+];
+buttons.forEach((button) => (button.type = "button"));
+buttons[0].value = "start";
+buttons[1].value = "pauza";
+buttons[2].value = "reset";
 
 let isActive = false;
 let hours = 0;
 let minutes = 0;
 let seconds = 0;
 
-startButton.onclick = () => {
+buttons[0].onclick = () => {
   isActive = true;
   optionsElement.innerHTML = "";
-  optionsElement.appendChild(stopButton);
-  optionsElement.appendChild(restartButton);
+  optionsElement.appendChild(buttons[1]);
+  optionsElement.appendChild(buttons[2]);
 };
-stopButton.onclick = () => {
+buttons[1].onclick = () => {
   isActive = false;
   optionsElement.innerHTML = "";
-  optionsElement.appendChild(startButton);
-  optionsElement.appendChild(restartButton);
+  optionsElement.appendChild(buttons[0]);
+  optionsElement.appendChild(buttons[2]);
 };
-restartButton.onclick = () => {
+buttons[2].onclick = () => {
   isActive = false;
-  timerElement.textContent = 0;
+  hours = 0;
+  minutes = 0;
+  seconds = 0;
   optionsElement.innerHTML = "";
-  optionsElement.appendChild(startButton);
-  optionsElement.appendChild(restartButton);
+  optionsElement.appendChild(buttons[0]);
+  optionsElement.appendChild(buttons[2]);
 };
 
-optionsElement.appendChild(startButton);
-optionsElement.appendChild(restartButton);
+optionsElement.appendChild(buttons[0]);
+optionsElement.appendChild(buttons[2]);
 
 setInterval(() => {
-  if (isActive) seconds = (seconds + 0.01).toFixed(2);
+  if (isActive) seconds = (parseFloat(seconds) + 0.01).toFixed(2);
 
   if (seconds == 60) {
     seconds = 0;
@@ -51,6 +53,28 @@ setInterval(() => {
     hours++;
   }
 
-  console.log(seconds == 60);
-  timerElement.textContent = `${hours}:${minutes}:${seconds}`;
+  timerElement.textContent = `${pretty(hours)}:${pretty(minutes)}:${pretty(
+    seconds
+  )}`;
+
+  document.querySelector(".clock-of-seconds").style.transform = `rotate(${
+    (parseFloat(seconds) / 60) * 360
+  }deg)`;
+  document.querySelector(".clock-of-minutes").style.transform = `rotate(${
+    ((parseFloat(minutes) * 60 + parseFloat(seconds)) / 60 / 60) * 360
+  }deg)`;
+  document.querySelector(".clock-of-hours").style.transform = `rotate(${
+    ((parseFloat(hours) * 60 * 60 +
+      parseFloat(minutes) * 60 +
+      parseFloat(seconds)) /
+      60 /
+      60 /
+      12) *
+    360
+  }deg)`;
 }, 10);
+
+const pretty = (time) => {
+  if (parseFloat(time) < 10) return "0" + parseFloat(time);
+  return time;
+};
