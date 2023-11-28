@@ -56,7 +56,7 @@ main {
 main section.left {
   text-align: justify;
 
-  width: 80%;
+  width: 100%;
   height: 100%;
 
   padding: 20px;
@@ -82,6 +82,12 @@ main section.left .image {
 main section.right {
   width: auto;
   height: 100%;
+  padding: 50px 0 0 30px;
 
   background-color: blanchedalmond;
+}
+
+video {
+  position: relative;
+  bottom: 150px;
 }
