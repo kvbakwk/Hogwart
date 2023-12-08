@@ -1,0 +1,66 @@
+html {
+  color: white;
+  font-family: "Tahoma";
+}
+
+.top banner:nth-child(1),
+.top banner:nth-child(3),
+.top banner:nth-child(4) {
+  width: 17%;
+  height: 100px;
+
+  background-color: #983713;
+}
+
+.top banner:nth-child(2) {
+  text-align: center;
+
+  width: 49%;
+  height: 100px;
+
+  background-color: #983713;
+}
+
+.left {
+  width: 80%;
+  height: 500px;
+  background: #ff7f50;
+}
+
+.right {
+  width: 20%;
+  height: 500px;
+  background: #ff7f50;
+}
+
+footer {
+  text-align: right;
+  background: #983713;
+}
+
+button {
+  color: #2f2f2f;
+
+  margin: 5px;
+  padding: 10px 30px;
+
+  background: #d3d3d3;
+  border: 2px solid #2f2f2f;
+}
+
+input {
+  color: orange;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  flex-direction: row;
+}
+
+banner {
+  display: block;
+}
