@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zadanie </title>
-
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filmy</title>
+    <link rel="stylesheet" href="styl1.css" />
+  </head>
+  <body>
+    <div style="display: flex">
+      <section class="left-bar">
+        <h3>Dostępne gatunki filmu</h3>
+        <ol>
+          <li>Sci-Fi</li>
+          <li>animacja</li>
+          <li>dramat</li>
+          <li>horror</li>
+          <li>komedia</li>
+        </ol>
+        <p><a href="/kadr.jpg">Pobierz obraz</a></p>
+        <p>
+          <a href="http://repertuar-kin.pl" target="_blank">
+            Sprawdź repertuar kin
+          </a>
+        </p>
+      </section>
+      <div style="width: 75%">
+        <section class="header">
+          <h1>FILMOTEKA</h1>
+        </section>
+        <section class="main">
+          <form method="post" action="dodaj.php">
+            <p>Tytuł: <input type="text" /></p>
+            <p>Gatunek filmu: <input type="number" /></p>
+            <p>Rok produkcji: <input type="number" /></p>
+            <p>Ocena: <input type="number" /></p>
+            <p>
+              <input type="button" value="CZYŚĆ" />
+              <input type="submit" value="DODAJ" />
+            </p>
+          </form>
+        </section>
+        <section class="image">
+          <img src="kadr.jpg" alt="zdjęcia filmowe" />
+        </section>
+      </div>
+    </div>
+    <section class="footer">
+      <p>Autor strony: 00000000000</p>
+    </section>
+  </body>
 </html>

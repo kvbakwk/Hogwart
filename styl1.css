@@ -1,0 +1,68 @@
+html {
+  font-family: "Helvetica";
+}
+
+h1 {
+  letter-spacing: 5px;
+}
+
+form {
+  line-height: 3;
+  margin: 30px;
+}
+
+form p {
+  margin: 0;
+}
+
+form:hover {
+  background: deepskyblue;
+}
+
+.left-bar {
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 25%;
+  height: 700px;
+
+  background: navy;
+}
+
+.header {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 100px;
+
+  background: royalblue;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+
+  height: 300px;
+
+  background: steelblue;
+}
+
+.image {
+  text-align: center;
+
+  height: 300px;
+
+  background: royalblue;
+}
+
+.footer {
+  text-align: center;
+
+  padding: 20px;
+
+  background: steelblue;
+}
