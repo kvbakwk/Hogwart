@@ -1,3 +1,1 @@
-# Hogwart
-
-## Repozytorium pod prace w szkole.
+_school time_
