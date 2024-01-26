@@ -17,7 +17,7 @@ document
           bttn.textContent))
   );
 document
-  .querySelectorAll("input")
+  .querySelectorAll(".radio")
   .forEach(
     (i) =>
       (i.onchange = (e) =>

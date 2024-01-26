@@ -23,18 +23,21 @@
         <p>Podaj rozmiar czcionki w procentach, np. 200%</p>
         <input id="fontSize" value="100%" />
         <p>Czy rysunek ma mieć ramkę?</p>
-        <input id="border" type="checkbox" checked /> Rysuj ramkę
+        <label for="border">
+          <input id="border" type="checkbox" checked /> Rysuj ramkę
+        </label>
         <p>Jaki jest typ punktora listy?</p>
         <label for="disc">
-          <input id="disc" type="radio" name="type" checked /> dysk
+          <input id="disc" class="radio" type="radio" name="type" checked />
+          dysk
         </label>
         <br />
         <label for="square">
-          <input id="square" type="radio" name="type" /> kwadrat
+          <input id="square" class="radio" type="radio" name="type" /> kwadrat
         </label>
         <br />
         <label for="circle">
-          <input id="circle" type="radio" name="type" /> okrąg
+          <input id="circle" class="radio" type="radio" name="type" /> okrąg
         </label>
       </section>
       <section class="right">
