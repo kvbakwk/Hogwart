@@ -1,0 +1,52 @@
+html {
+  font-family: Georgia;
+}
+
+.flex {
+  display: flex;
+}
+
+.left {
+  color: white;
+
+  width: 30%;
+  height: 600px;
+
+  background-color: maroon;
+}
+
+.right {
+  overflow: auto;
+
+  color: white;
+
+  width: 70%;
+  height: 600px;
+
+  background-color: maroon;
+}
+
+.footer {
+  color: white;
+  background-color: dimgray;
+}
+
+p {
+  padding: 10px;
+}
+
+img {
+  padding: 10px;
+
+  border: 1px solid white;
+}
+
+button.indigo {
+  background-color: indigo;
+}
+button.steelblue {
+  background-color: steelblue;
+}
+button.olive {
+  background-color: olive;
+}
