@@ -1,1 +1,0 @@
-_school time_
